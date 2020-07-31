@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700&display=swap');
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    background: #f8f8f8;
+}
+
+.mixme-btn{
+    font: 600 20px 'Titillium Web', sans-serif ;
+    display: block;
+    margin: 24px auto;
+    padding: 8px 24px;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    color: white;
+    background: #ff7676;
+    cursor: pointer;
+}
+
+
+.mixme-btn:disabled{
+    background: #ffb3b3;
+    cursor: default;
+}
+
+.no-decorations{
+    text-decoration: none;
+}
