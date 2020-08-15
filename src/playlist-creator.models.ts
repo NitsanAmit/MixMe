@@ -10,6 +10,7 @@ export class Artist {
 }
 
 export class Mood {
+    public id: string = "";
     public name: string = "";
     public genres: string[] = [];
     public imagePath: string = "";
@@ -19,6 +20,7 @@ export class Mood {
 }
 
 export class Genre {
+    public id: string = "";
     public name: string = "";
     public genres: string[] = [];
     public imagePath: string = "";

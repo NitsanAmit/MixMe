@@ -4,7 +4,7 @@ import {LoginButton} from "./login-button";
 import {SpotifyAPI} from "./SpotifyApi";
 import "./mixme-app.css"
 
-export const MixMeApp = () => {
+export const MixMeApp: React.FunctionComponent = () => {
     const [token, setToken] = useState<string>( window.sessionStorage.getItem(TOKEN_STORAGE_KEY) || '');
     const [spotifyApi, setSpotifyApi] = useState();
 

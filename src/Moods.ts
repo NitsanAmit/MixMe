@@ -1,40 +1,52 @@
 import {Mood} from "./playlist-creator.models";
+import sad from './icons/sad.png';
+import happy from './icons/happy.png';
+import dancey from './icons/dancey.png';
+import angry from './icons/angry.png';
+import relaxed from './icons/relaxed.png';
+import workout from './icons/workout.png';
 
-export const Moods: {[key: string]: Mood} = {
-    sad : {
+export const Moods: { [key: string]: Mood } = {
+    sad: {
+        id: "sad",
         name: "Sad",
         genres: ["rainy-day", "sad"],
-        imagePath: "icons/pop.png",
+        imagePath: sad,
         selected: false,
     },
-    happy : {
+    happy: {
+        id: "happy",
         name: "Happy",
         genres: ["happy"],
-        imagePath: "icons/pop.png",
+        imagePath: happy,
         selected: false,
     },
-    dancey : {
+    dancey: {
+        id: "dancey",
         name: "Dancey",
         genres: ["dance", "pop", "party"],
-        imagePath: "icons/pop.png",
+        imagePath: dancey,
         selected: false,
     },
-    Angry : {
+    angry: {
+        id: "angry",
         name: "Angry",
         genres: ["metal", "rock", "hard-rock"],
-        imagePath: "icons/pop.png",
+        imagePath: angry,
         selected: false,
     },
-    relaxed : {
+    relaxed: {
+        id: "relaxed",
         name: "Relaxed",
         genres: ["study", "sleep"],
-        imagePath: "icons/pop.png",
+        imagePath: relaxed,
         selected: false,
     },
-    workout : {
+    workout: {
+        id: "workout",
         name: "Working Out",
         genres: ["work-out"],
-        imagePath: "icons/pop.png",
+        imagePath: workout,
         selected: false,
     }
 }

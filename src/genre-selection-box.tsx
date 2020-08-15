@@ -1,19 +1,18 @@
 import React from "react";
 import {observer} from "mobx-react";
-import {Mood} from "./playlist-creator.models";
+import {Genre} from "./playlist-creator.models";
 import {SelectionBox} from "./selection-box";
 
+export const GenreSelectionBox = observer((props: GenreSelectionBoxProps) => {
 
-export const MoodSelectionBox = observer((props: MoodSelectionBoxProps) => {
-
-    const {mood, ...otherProps} = props;
+    const {genre, ...otherProps} = props;
 
     return (
         <SelectionBox
             styles={styles}
-            itemId={mood.id}
-            backgroundImage={mood.imagePath}
-            label={mood.name}
+            itemId={genre.id}
+            backgroundImage={genre.imagePath}
+            label={genre.name}
             {...otherProps}
         />
     )
@@ -28,8 +27,8 @@ const styles = {
     textShadow: "-1px 1px 1px #d1d1d1",
 }
 
-interface MoodSelectionBoxProps {
-    mood: Mood;
+interface GenreSelectionBoxProps {
+    genre: Genre;
     isSelected: boolean;
     onItemSelect: (event: any) => void;
 }

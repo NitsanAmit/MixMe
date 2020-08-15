@@ -1,4 +1,3 @@
-
 export class SpotifyAPI{
 
     private readonly token: string;
@@ -15,9 +14,14 @@ export class SpotifyAPI{
                 method: 'GET',
                 headers: {
                     'Authorization': "Bearer " + this.token,
-                }
+                },
             })
-            .then(response => response.json())
+            .then(response => {
+                if(response.status !== 200){
+                    throw "fetch unsuccessful";
+                }
+                return response.json();
+            })
             .then(response => response.items)
             .catch(this.onTokenRevoked);
     }

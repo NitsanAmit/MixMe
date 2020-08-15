@@ -4,7 +4,7 @@ import { observer } from "mobx-react"
 import {ArtistSelectionBox} from "./artist-selection-box";
 import {Artist} from "./playlist-creator.models";
 
-export const ArtistPicker: React.FunctionComponent<ArtistPickerProps> = observer(({artists, onItemSelect, canContinue}) =>
+export const ArtistPicker: React.FunctionComponent<ArtistPickerProps> = observer(({artists, onItemSelect}) =>
     (
         <>
             <h2>Pick your top 3 artists:</h2>
@@ -14,7 +14,6 @@ export const ArtistPicker: React.FunctionComponent<ArtistPickerProps> = observer
                         artistId && <ArtistSelectionBox key={artistId} artist={artists[artistId]} isSelected={artists[artistId].selected} onItemSelect={onItemSelect}/>)
                 }
             </div>
-            <button className="mixme-btn" disabled={!canContinue}>Continue ></button>
         </>
     )
 );
@@ -22,5 +21,4 @@ export const ArtistPicker: React.FunctionComponent<ArtistPickerProps> = observer
 interface ArtistPickerProps {
     artists: { [key: string]: Artist };
     onItemSelect: (event: any) => void;
-    canContinue: boolean;
 }
